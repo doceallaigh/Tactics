@@ -1,32 +1,104 @@
 # Tactics
 ## (Placeholder name)
 
-This repository is home to a (currently prototypal) tactical RPG for mobile devices.  The concept is a game in which users recruit and empower heroes and soldiers used to fight on a grid based combat terrain.
+This repository is home to a (currently prototypical) tactical RPG for mobile devices.  The concept is a game in which users recruit and empower heroes and soldiers used to fight on a grid based combat terrain.
 
-## Open questions/concepts for breakdown:
+## Design concepts under consideration:
 - Setting
-- Grid cardinality (square or hex?)
+  - Most likely fantasy
+  - Possibly futuristic
+- Grid cardinality
+  - Current incumbent is hex-grid
+  - Possibly change to classical 4-grid
 - F2P P2P balancing mechanism
+  - To be done largely through limiting number of hero slots in a given battle
+  - Cash item availability will also play into this
+  - Auction house or other trade options may also alleviate this
 - Game modes
   - Campaign
-  - Arena
+    - Story-driven single player
+    - Co-op campaign may also encourage user-base expansion
+  - Idle
+    - Deployment type mechanism encourages users to return periodically
+    - Possible yields include:
+      - Unit recruits
+      - Items
+      - Player/unit experience
+      - Premium currency
   - PvP
+    - Arena
+      - Idle mode forces focus on team composition, is not limited by active user-base
+      - Active combat requiring engagement from 1 or both parties for separate ladder
     - Colosseum
+      - Active PvP with entrance fee and bracket system with prizes
     - KoTH
+      - One player with hero against multiple with generic units
+    - CTF
+      - Game modes with non-combat victory conditions encourage exploration in team composition
+    - Stagnation prevention
+      - In order to prevent one mode from stealing all focus, use the following:
+        - Daily quests with additional rewards for mode participation
+        - Tickets to allow free instance hosting (with host bonus)
   - Co-op
-  - Multiplayer mode rotation
-    - Free host tickets
+    - Hosted battles with players against AI
+      - Each player fills a single party slot
+  - Endurance
+    - Player fights multiple battles with same party to earn unique rewards
+  - LAN
+    - Above multiplayer game modes can be made available on LAN (with bonus) to promote user-base expansion
 - Procedural character generation
+  - Generic (non-hero) characters should be generated automatically
 - Character proliferation
   - Character combination
-  - Bloodlines
+    - Merge (prefer not breed) characters to generate offspring with mixed traits
+    - Possible premium items may include option for control over resulting traits
+  - Lineage system
+    - The longer a lineage persists, the stronger it becomes
+    - May consider a mechanism to retire (collapse) a lineage for a boost
   - Interaction between unique/generic characters
+    - Heroes should have unique passive abilities granted to other members of party
 - Power creep control
   - Hero roster
+    - In order to limit the meta-game from targeting a small subset of characters, rotate available heroes
   - Party limits
+    - Heroes will only comprise part of the party, with generic characters filling in the rest
 - Character variety
   - Class system
+    - Each character will have one or more of the following classes, influencing their role in the party:
+      - Archer (Ranged damage)
+      - Bard (Buff support)
+      - Beastmaster (Melee attack and beast taming in non-PvP)
+      - Builder (Map manipulation/fortification)
+      - Cleric (Buff/Heal support)
+      - Craftsman (Possibly, focus would be largely non-combat)
+      - Summoner (Squishy, generates adds)
+      - Warrior (Melee damage)
+      - Etc.
+    - Classes can be categorized as follows:
+      - Offense
+      - Defense
+      - Support
+      - Miscellaneous
+    - Class inheritance
+      - As a lineage extends, successors are granted a primary skill set biased toward their ancestors'
+      - Successors are granted most (all?) secondary class abilities which must be unlocked to construct a unique secondary skill-set
+  - Titles
+    - Unit and player titles are granted when certain feats are achieved
+      - A finite number of titles can be applied at any one time, and each grants a unique bonus
+      - Unit titles are inherited by successors in a given unit's lineage
   - Type system
-    - Elemental types?
-    - Bludgeoning/Piercing/Slashing?
-    - Beast/Hybrid/Human?
+    - Elemental types
+      - Elemental precedence chain, where each element has a strength and a weakness
+        - Pro: Recognizable, Intuitive
+        - Con: Overused
+    - Bludgeoning/Piercing/Slashing
+      - Similar to elemental types above, can be layered on top for additional complexity
+    - Beast/Human/Hybrid
+      - Beasts provide added mobility as mounts and act as melee units
+        - May also have exaggerated elemental and map tile affinities
+      - Humans follow traditional class system as described above
+      - Hybrids follow traditional class system as humans do, but with exaggerated affinities as with beasts
+- Map characteristics
+  - Tile types
+    - Influence movement
+    - May also interplay with elemental type system
